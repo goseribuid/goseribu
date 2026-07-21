@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>GoSeribu | Trip Wisata Kepulauan Seribu</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins,sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -23,49 +25,47 @@ color:#333;
 
 header{
 position:fixed;
-top:0;
 width:100%;
-background:#0099cc;
-padding:15px 8%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:999;
+background:#00a8e8;
+color:white;
+z-index:1000;
 }
 
-header h2{
-color:white;
+.logo{
+font-size:28px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
 font-weight:500;
 }
 
 .hero{
 height:100vh;
-background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
+background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+color:white;
 }
 
-.hero div{
-background:rgba(0,0,0,.5);
-padding:40px;
-border-radius:15px;
-color:white;
+.overlay{
+background:rgba(0,0,0,.45);
+padding:50px;
+border-radius:20px;
 }
 
 .hero h1{
 font-size:55px;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
 .hero p{
@@ -74,81 +74,85 @@ margin-bottom:25px;
 }
 
 .btn{
-background:#00bfff;
-padding:14px 30px;
-color:white;
-text-decoration:none;
-border-radius:50px;
 display:inline-block;
+padding:15px 35px;
+background:#00b4ff;
+color:white;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#008fd1;
+transform:scale(1.05);
 }
 
 section{
 padding:90px 8%;
 }
 
-.title{
+h2{
 text-align:center;
 margin-bottom:40px;
+font-size:38px;
+color:#0094d8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.box{
 background:white;
-border-radius:15px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.4s;
 }
 
-.box:hover{
+.card:hover{
 transform:translateY(-10px);
 }
 
-.box img{
+.card img{
 width:100%;
 height:220px;
 object-fit:cover;
 }
 
-.box h3{
-padding:15px;
+.card-content{
+padding:20px;
 }
 
-.box p{
-padding:0 15px 20px;
-}
-
-footer{
-background:#0099cc;
-color:white;
-text-align:center;
-padding:25px;
+.price{
+color:#00a8e8;
+font-size:22px;
+font-weight:bold;
+margin-top:15px;
 }
 
 .contact{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+background:#0094d8;
+color:white;
 text-align:center;
 }
 
-@media(max-width:768px){
-
-.hero h1{
-font-size:35px;
+.contact p{
+margin:10px 0;
+font-size:18px;
 }
 
-nav{
-display:none;
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
 }
 
-}
 </style>
 
 </head>
@@ -157,26 +161,24 @@ display:none;
 
 <header>
 
-<h2>GoSeribu</h2>
+<div class="logo">GoSeribu</div>
 
 <nav>
-
-<a href="#about">Tentang</a>
+<a href="#tentang">Tentang</a>
 <a href="#destinasi">Destinasi</a>
 <a href="#paket">Paket</a>
 <a href="#kontak">Kontak</a>
-
 </nav>
 
 </header>
 
 <section class="hero">
 
-<div>
+<div class="overlay">
 
 <h1>Trip Wisata Kepulauan Seribu</h1>
 
-<p>Nikmati keindahan pantai, snorkeling, diving, dan pengalaman liburan terbaik bersama GoSeribu.</p>
+<p>Nikmati liburan terbaik bersama GoSeribu.</p>
 
 <a href="#paket" class="btn">Lihat Paket</a>
 
@@ -184,46 +186,45 @@ display:none;
 
 </section>
 
-<section id="about">
-
-<div class="title">
+<section id="tentang">
 
 <h2>Tentang GoSeribu</h2>
 
-</div>
-
-<p style="text-align:center;max-width:900px;margin:auto;">
-GoSeribu merupakan layanan perjalanan wisata menuju Kepulauan Seribu dengan berbagai pilihan paket liburan, snorkeling, island hopping, gathering perusahaan, hingga private trip dengan harga terbaik.
+<p style="text-align:center;font-size:18px;">
+GoSeribu adalah penyedia jasa wisata Kepulauan Seribu yang menawarkan paket snorkeling,
+island hopping, private trip, gathering perusahaan, dan family trip dengan pelayanan terbaik.
 </p>
 
 </section>
 
 <section id="destinasi">
 
-<div class="title">
-
 <h2>Destinasi Populer</h2>
 
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+<div class="card-content">
+<h3>Pulau Pramuka</h3>
+<p>Pantai indah dan snorkeling.</p>
+</div>
 </div>
 
 <div class="card">
-
-<div class="box">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
-<h3>Pulau Pari</h3>
-<p>Pantai pasir putih dan spot snorkeling terbaik.</p>
-</div>
-
-<div class="box">
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80">
-<h3>Pulau Tidung</h3>
-<p>Jembatan Cinta yang menjadi ikon wisata.</p>
-</div>
-
-<div class="box">
-<img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80">
+<div class="card-content">
 <h3>Pulau Harapan</h3>
-<p>Keindahan bawah laut dan island hopping.</p>
+<p>Air laut jernih dan sunset terbaik.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=80">
+<div class="card-content">
+<h3>Pulau Pari</h3>
+<p>Pantai pasir putih yang cantik.</p>
+</div>
 </div>
 
 </div>
@@ -232,44 +233,41 @@ GoSeribu merupakan layanan perjalanan wisata menuju Kepulauan Seribu dengan berb
 
 <section id="paket">
 
-<div class="title">
-
 <h2>Paket Wisata</h2>
 
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<h3>Open Trip</h3>
+<p>1 Hari</p>
+<div class="price">Rp350.000</div>
+</div>
 </div>
 
 <div class="card">
-
-<div class="box">
-<h3>Paket 1 Hari</h3>
-<p>Mulai Rp350.000/orang.</p>
-</div>
-
-<div class="box">
-<h3>Paket 2 Hari 1 Malam</h3>
-<p>Mulai Rp750.000/orang.</p>
-</div>
-
-<div class="box">
+<div class="card-content">
 <h3>Private Trip</h3>
-<p>Harga menyesuaikan jumlah peserta.</p>
+<p>2 Hari 1 Malam</p>
+<div class="price">Rp1.500.000</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Family Trip</h3>
+<p>3 Hari 2 Malam</p>
+<div class="price">Rp2.500.000</div>
+</div>
 </div>
 
 </div>
 
 </section>
 
-<section id="kontak">
-
-<div class="title">
+<section id="kontak" class="contact">
 
 <h2>Hubungi Kami</h2>
-
-</div>
-
-<div class="contact">
-
-<h3>GoSeribu</h3>
 
 <p>📞 0812-3456-7890</p>
 
@@ -277,7 +275,7 @@ GoSeribu merupakan layanan perjalanan wisata menuju Kepulauan Seribu dengan berb
 
 <p>📍 Marina Ancol, Jakarta</p>
 
-</div>
+<a class="btn" href="https://wa.me/6281234567890">Chat WhatsApp</a>
 
 </section>
 
